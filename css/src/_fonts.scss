@@ -1,0 +1,48 @@
+
+
+@import url("https://use.typekit.net/sjo4tij.css");
+
+@mixin font {
+	font-family: "futura-pt", sans-serif;
+	font-weight: 400;
+}
+
+@mixin font-italic {
+	font-family: "futura-pt", sans-serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+@mixin font-medium {
+	font-family: "futura-pt", sans-serif;
+	font-weight: 500;
+}
+
+@mixin font-medium-italic {
+	font-family: "futura-pt", sans-serif;
+	font-weight: 500;
+	font-style: italic;
+}
+
+@mixin font-demi {
+	font-family: "futura-pt", sans-serif;
+	font-weight: 600;
+}
+
+@mixin font-demi-italic {
+	font-family: "futura-pt", sans-serif;
+	font-weight: 600;
+	font-style: italic;
+}
+
+@mixin font-bold {
+	font-family: "futura-pt", sans-serif;
+	font-weight: 700;
+}
+
+@mixin font-bold-italic {
+	font-family: "futura-pt", sans-serif;
+	font-weight: 700;
+	font-style: italic;
+}
+

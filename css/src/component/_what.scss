@@ -1,0 +1,83 @@
+
+
+.what {
+    @include padding;
+    text-align: center;
+    background: url(../img/bg-chemistry-basic.svg) center center no-repeat;
+    background-size: cover;
+
+    .intro {
+        padding-bottom: 3%;
+    }
+
+    .icons {
+
+        @include respond-to( $bp-m ) {
+            display: flex;
+
+            .icon {
+                flex: 1;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    width: 20%;
+                    height: 20px;
+                    position: absolute;
+                    left: -10%;
+                    background: url(../img/arrow-what.png) right center no-repeat;
+                    background-size: cover;
+                    top: 75px;
+                }
+
+                &:first-child:before {
+                    display: none;
+                }
+            }
+        }
+
+        @include respond-to( $bp-l ) {
+            .icon {
+                &:before {
+                    width: 34%;
+                    left: -17%;
+                }
+            }
+        }
+
+        .icon {
+            padding: 0 1.5%;
+
+            .icon-image {
+                width: 150px;
+                height: 150px;
+                margin: 10px auto;
+                display: flex;
+                align-items: center;
+                border-radius: 50%;
+
+                &.red {
+                    background: $red;
+                }
+
+                &.black {
+                    background: black;
+                }
+                
+                &.grey {
+                    background: $grey-dark;
+                }
+
+                .icon-image-inner {
+                    flex: 1;
+
+                    img {
+                        max-width: 80px;
+                        max-height: 80px;
+                    }
+                }
+            }
+        }
+    }
+}
+

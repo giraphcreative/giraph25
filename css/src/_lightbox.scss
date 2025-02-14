@@ -1,0 +1,41 @@
+
+
+.lightbox-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: rgba( black, .7 );
+
+    &.open {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lightbox {
+        flex: 0 0 60%;
+        position: absolute;
+        min-width: 320px;
+        max-width: 960px;
+        background: white;
+        padding: 20px 40px;
+        
+        @include respond-to( $bp-m ) {
+            display: flex;
+            align-items: center;
+
+            .column:first-child {
+                flex: 1 1 60%;
+            }
+
+            .column:last-child {
+                flex: 1 1 40%;
+            }
+        }
+    }
+}
+

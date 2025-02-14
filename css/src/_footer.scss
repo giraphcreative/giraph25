@@ -1,0 +1,45 @@
+
+
+footer {
+	@include clearfix;
+	padding: 30px 8%;
+	background: $red url( ../img/bg-giraffe.svg ) center center no-repeat;
+	background-size: cover;
+	color: white;
+	font-size: 1.2em;
+	line-height: 1.3em;
+	text-align: center;
+
+	* {
+		color: white;
+	}
+
+	@include respond-to( $bp-s ) {
+		text-align: left;
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+
+		.column {
+			flex: 1;
+
+			&:first-child {
+				text-align: right;
+			}
+		}
+	}
+
+	a {
+		color: white;
+	}
+
+	h3 {
+		@include font-bold;
+		font-size: 1.6em;
+	}
+
+	.logo-footer {
+		max-width: 220px;
+	}
+}
+

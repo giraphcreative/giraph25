@@ -1,0 +1,15 @@
+
+
+.spacer {
+    height: 30px;
+
+    &.giraffe {
+        background: url(../img/bg-giraffe.svg) center center no-repeat;
+        background-size: cover;
+    }
+
+    &.red {
+        background-color: $red;
+    }
+}
+

@@ -1,0 +1,48 @@
+
+
+.statistics {
+    background: white;
+    position: relative;
+    z-index: 1;
+    
+    @include respond-to( $bp-m ) {
+        display: flex;
+    }
+
+    .stat {
+        color: white;
+        @include padding;
+        text-align: center;
+
+        &.red {
+            background: $red;
+        }
+
+        &.grey {
+            background: $grey;
+        }
+
+        &.black {
+            background: black;
+        }
+
+        span {
+            @include font-bold;
+            font-size: 3em;
+            line-height: 1.2em;
+            display: block;
+        }
+
+        @include respond-to( $bp-m ) {
+            flex: 1;
+            padding: 5% 3%;
+            flex-basis: fit-content;
+        }
+
+        @include respond-to( $bp-l ) {
+            padding: 3%;
+            flex-basis: 33.3333%;
+        }
+    }
+}
+

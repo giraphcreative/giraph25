@@ -1,0 +1,27 @@
+
+
+.header-container {
+    .header {
+        @include padding;
+        text-align: center;
+
+        @include respond-to( $bp-xl ) {
+            padding: 6% 20%;
+        }
+    }
+
+    &.red.giraffe {
+        background: $red url(../img/bg-giraffe.svg) center center no-repeat;
+        background-size: cover;
+
+        * {
+            color: white;
+        }
+
+        &.molecule .header {
+            background: url(../img/bg-molecule.svg) center center no-repeat;
+            background-size: cover;
+        }
+    }
+}
+

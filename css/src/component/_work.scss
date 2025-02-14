@@ -1,0 +1,47 @@
+
+
+.work-container {
+    background: url(../img/bg-chemistry-complex.svg) center center no-repeat;
+    background-size: cover;
+    @include padding;
+
+    .work-title {
+        padding-bottom: 20px;
+
+        @include respond-to( $bp-m ) {
+            padding-bottom: 40px;
+        }
+    }
+
+    .work {
+        @include respond-to( $bp-s ) {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -2%;
+        }
+
+        .work-item {
+            margin-bottom: 10px;
+
+            img {
+                display: block;
+            }
+
+            @include respond-to( $bp-s ) {
+                flex: 0 0 48%;
+                margin: 0 2% 2% 0;
+            }
+
+            @include respond-to( $bp-l ) {
+                flex: 0 0 31.3333%;
+                margin: 0 2% 2% 0;
+            }
+
+            .item-description {
+                display: none;
+            }
+        }
+    }
+}
+
+
