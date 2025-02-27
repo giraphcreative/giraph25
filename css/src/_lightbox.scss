@@ -23,17 +23,37 @@
         max-width: 960px;
         background: white;
         padding: 20px 40px;
+
+        .lightbox-close {
+            position: absolute;
+            top: 12px;
+            right: 4px;
+            color: black;
+            @include font-bold;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
         
         @include respond-to( $bp-m ) {
-            display: flex;
-            align-items: center;
+            padding: 30px 40px;
 
-            .column:first-child {
-                flex: 1 1 60%;
-            }
+            .lightbox-inner {
+                display: flex;
+                align-items: center;
 
-            .column:last-child {
-                flex: 1 1 40%;
+                .column:first-child {
+                    flex: 1 1 60%;
+                    padding-right: 30px;
+                }
+
+                .column:last-child {
+                    flex: 1 1 40%;
+                }
             }
         }
     }

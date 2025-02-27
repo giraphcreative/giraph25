@@ -220,7 +220,7 @@
                     "max_size": "",
                     "mime_types": "",
                     "allow_in_bindings": 0,
-                    "preview_size": "medium",
+                    "preview_size": "thumbnail",
                     "parent_repeater": "field_67ae489b2d4df"
                 }
             ]
@@ -251,5 +251,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1739475999
+    "modified": 1740671701
 }

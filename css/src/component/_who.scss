@@ -1,0 +1,110 @@
+
+
+.who {
+    background: $red url(../img/bg-giraffe.svg) center center no-repeat;
+    background-size: cover;
+    position: relative;
+	padding: 120px 8%;
+
+	@include respond-to( $bp-s ) {
+		padding: 6% 8%;
+	}
+
+    .title {
+        background: white;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 40px;
+        padding: 10px 0;
+
+        @include respond-to( $bp-s ) {
+            top: 13%;
+            padding-left: 45%;
+            z-index: 1;
+        }
+
+        @include respond-to( $bp-l ) {
+            top: 18%;
+        }
+
+        h2 {
+            display: inline-block;
+        }
+    }
+
+    .who-people {
+        background: white;
+        padding: 3px;
+
+        .person {
+            margin-bottom: 3px;
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @include respond-to( $bp-s ) {
+            padding: 0;
+            background: transparent;
+        }
+    }
+
+    .person {
+        aspect-ratio: 1 / 1;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 3px;
+        position: relative;
+
+        .abbrev {
+            position: absolute;
+            top: 10%;
+            left: 6%;
+            color: white;
+            @include font-bold;
+            text-shadow: 0 0 20px rgba( black, .8 );
+            font-size: 2em;
+        }
+
+        .person-content {
+            display: none;
+        }
+    }
+
+    @include respond-to( $bp-s ) {
+        .primary, .secondary, .collaborators {
+            display: flex;
+
+            .person {
+                flex: 1;
+                margin-bottom: 0;
+                border: 5px solid white;
+                border-left: 0;
+                position: relative;
+                z-index: 5;
+
+                &:first-child {
+                    border-left: 5px solid white;
+                }
+            }
+        }
+
+        .primary {
+            padding-right: 50%;
+        }
+
+        .secondary {
+            padding-left: calc( 25% - 3px );
+            margin-top: -5px;
+        }
+
+        .collaborators {
+            margin-top: 10%;
+            padding: 0 25% 0 40%;
+        }
+    }
+}
+
