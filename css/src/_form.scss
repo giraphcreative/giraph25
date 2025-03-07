@@ -3,11 +3,13 @@
 .text-field {
 	@include font;
 	display: inline-block;
-	padding: 6px 8px;
+	padding: 10px 12px;
 	max-width: 100%;
-	font-size: 15px;
-	line-height: 1.5em;
-	border: 3px solid #ddd;
+	font-size: 1.2em !important;
+	line-height: 1.2em !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+	background: rgba( white, .75 ) !important;
 }
 
 input[type=text], input[type=search], select {
@@ -59,7 +61,7 @@ button, input[type=submit] {
 		@extend .text-field;
 
 		&:focus {
-			border: 3px solid $green;
+			background: rgba( white, 1 ) !important;
 			outline: none;
 		}
 	}

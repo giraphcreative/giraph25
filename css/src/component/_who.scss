@@ -37,18 +37,72 @@
     .who-people {
         background: white;
         padding: 3px;
+        
+        @include respond-to( $bp-s ) {
+            position: relative;
+        }
+
+        &:before {
+            @include respond-to( $bp-s ) {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 30%;
+                height: 70%;
+                content: '';
+                background: url(../img/giraffe-reaching.svg) bottom center no-repeat;
+                background-size: contain;
+            }
+        }
 
         .person {
             margin-bottom: 3px;
-            
-            &:last-child {
+            cursor: pointer;
+        }
+
+        .collaborators {
+            .person:last-child {
                 margin-bottom: 0;
+            }
+
+            @include respond-to( $bp-s ) {
+                position: relative;
+            }
+
+            &:after {
+                @include respond-to( $bp-s ) {
+                    @include font-bold;
+                    font-size: 1.2em;
+                    line-height: 1.4em;
+                    content: "Featured Collaborators";
+                    position: absolute;
+                    right: 2%;
+                    width: 20%;
+                    bottom: 30%;
+                    color: white;
+                }
+
+                @include respond-to( $bp-l ) {
+                    font-size: 2em;
+                    bottom: 25%;
+                }
+
+                @include respond-to( $bp-xxl ) {
+                    font-size: 2.4em;
+                }
             }
         }
 
         @include respond-to( $bp-s ) {
             padding: 0;
             background: transparent;
+
+            .person {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
         }
     }
 

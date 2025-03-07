@@ -35,5 +35,7 @@ jQuery(document).ready(function($){
 
 	});
 
+	$( '.header-container' ).addClass( 'visible' );
+
 });
 

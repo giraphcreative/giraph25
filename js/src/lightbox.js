@@ -10,6 +10,14 @@ jQuery(document).ready(function($){
     $( '.work .work-item' ).click(function(){
         var $lightbox = $('.lightbox-container');
         $lightbox.find( 'img' ).attr( 'src', $(this).find( 'img' ).attr( 'src' ) );
+        $lightbox.find( '.content' ).html( $(this).find( '.item-description' ).html() );
+        $lightbox.addClass( 'open' );
+    });
+
+    $( '.who .person' ).click(function(){
+        var $lightbox = $('.lightbox-container');
+        $lightbox.find( 'img' ).attr( 'src', $(this).css('background-image').replace('")','').replace('url("','') );
+        $lightbox.find( '.content' ).html( $(this).find( '.person-content' ).html() );
         $lightbox.addClass( 'open' );
     });
 

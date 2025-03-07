@@ -1,12 +1,54 @@
 
 
 .header-container {
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        position: absolute;
+        left: -25%;
+        top: 0;
+        bottom: 0;
+        width: 25%;
+        transition: left 10s ease-in-out;
+        content: '';
+        background: url(../img/giraph-walk.gif) center center no-repeat;
+        background-size: contain;
+        z-index: 2;
+    }
+
+    &.molecule:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background: transparent url(../img/bg-molecule.svg) center center no-repeat;
+        background-size: cover;
+        z-index: 1;
+    }
+
+    &.visible:before {
+        left: 5%;
+    }
+
     .header {
         @include padding;
         text-align: center;
+        position: relative;
+        z-index: 3;
+
+        @include respond-to( $bp-l ) {
+            padding: 6% 20%;
+        }
 
         @include respond-to( $bp-xl ) {
-            padding: 6% 20%;
+            padding: 8% 25%;
+        }
+
+        @include respond-to( $bp-xxl ) {
+            padding: 8% 30%;
         }
     }
 
@@ -16,11 +58,6 @@
 
         * {
             color: white;
-        }
-
-        &.molecule .header {
-            background: url(../img/bg-molecule.svg) center center no-repeat;
-            background-size: cover;
         }
     }
 }

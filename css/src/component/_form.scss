@@ -1,0 +1,29 @@
+
+
+.form-container {
+    background: url(../img/bg-contact.svg) center center no-repeat;
+    background-size: cover;
+    @include padding;
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    .form-inner {
+        @include respond-to( $bp-m ) {
+            display: flex;
+            align-items: center;
+
+            .form {
+                flex: 1 1 60%;
+            }
+
+            .content {
+                flex: 1 1 40%;
+                padding-left: 5%;
+            }
+        }
+    }
+
+}
+

@@ -863,6 +863,27 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_67c71857c8fd2",
+                            "label": "Title",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
                             "key": "field_679a4e867fd83",
                             "label": "Form",
                             "name": "form",
@@ -876,7 +897,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "post_object",
+                            "return_format": "id",
                             "allow_null": 0,
                             "multiple": 0,
                             "allow_in_bindings": 0
@@ -979,5 +1000,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1739475423
+    "modified": 1741101350
 }

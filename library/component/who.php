@@ -12,7 +12,16 @@
             <div class="person" style="background-image: url(<?php print the_sub_field( 'photo' ) ?>);">
                 <div class="abbrev"><?php the_sub_field( 'abbrev' ); ?></div>
                 <div class="person-content">
+                    <h3><?php the_sub_field( 'name' ); ?>, <span><?php the_sub_field( 'title' ) ?></span></h3>
                     <?php the_sub_field( 'bio' ); ?>
+                    <div class="hobbies"><p><strong>Hobbies/Interests:</strong><br><?php the_sub_field( 'hobbies' ); ?></p></div>
+                    <?php if ( have_rows( 'programs' ) ) : ?>
+                        <div class="programs"><p><strong>Favorite Programs:</strong><br>
+                        <?php while ( have_rows( 'programs' ) ) : the_row();
+                            print '<img src="' . get_sub_field( 'icon' ) . '" title="' . get_sub_field( 'name' ) . '" alt="' . get_sub_field( 'name' ) . '" />';
+                        endwhile; ?>
+                        </p></div>
+                    <?php endif; ?>
                 </div>
             </div>
                 <?php endwhile;
@@ -24,7 +33,16 @@
             <div class="person" style="background-image: url(<?php print the_sub_field( 'photo' ) ?>);">
                 <div class="abbrev"><?php the_sub_field( 'abbrev' ); ?></div>
                 <div class="person-content">
+                    <h3><?php the_sub_field( 'name' ); ?>, <span><?php the_sub_field( 'title' ) ?></span></h3>
                     <?php the_sub_field( 'bio' ); ?>
+                    <div class="hobbies"><p><strong>Hobbies/Interests:</strong><br><?php the_sub_field( 'hobbies' ); ?></p></div>
+                    <?php if ( have_rows( 'programs' ) ) : ?>
+                        <div class="programs"><p><strong>Favorite Programs:</strong><br>
+                        <?php while ( have_rows( 'programs' ) ) : the_row();
+                            print '<img src="' . get_sub_field( 'icon' ) . '" title="' . get_sub_field( 'name' ) . '" alt="' . get_sub_field( 'name' ) . '" />';
+                        endwhile; ?>
+                        </p></div>
+                    <?php endif; ?>
                 </div>
             </div>
                 <?php endwhile;
@@ -35,8 +53,17 @@
                 while ( have_rows( 'collabs' ) ) : the_row(); ?>
             <div class="person" style="background-image: url(<?php print the_sub_field( 'photo' ) ?>);">
                 <div class="abbrev"><?php the_sub_field( 'abbrev' ); ?></div>
-                <div class="person-content">
+                    <div class="person-content">
+                    <h3><?php the_sub_field( 'name' ); ?>, <span><?php the_sub_field( 'title' ) ?></span></h3>
                     <?php the_sub_field( 'bio' ); ?>
+                    <div class="hobbies"><p><strong>Hobbies/Interests:</strong><br><?php the_sub_field( 'hobbies' ); ?></p></div>
+                    <?php if ( have_rows( 'programs' ) ) : ?>
+                        <div class="programs"><p><strong>Favorite Programs:</strong><br>
+                        <?php while ( have_rows( 'programs' ) ) : the_row();
+                            print '<img src="' . get_sub_field( 'icon' ) . '" title="' . get_sub_field( 'name' ) . '" alt="' . get_sub_field( 'name' ) . '" />';
+                        endwhile; ?>
+                        </p></div>
+                    <?php endif; ?>
                 </div>
             </div>
                 <?php endwhile;
