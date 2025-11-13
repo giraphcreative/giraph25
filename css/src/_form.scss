@@ -3,13 +3,15 @@
 .text-field {
 	@include font;
 	display: inline-block;
-	padding: 10px 12px;
+	padding: 10px 12px !important;
 	max-width: 100%;
-	font-size: 1.2em !important;
-	line-height: 1.2em !important;
-	border: 0 !important;
+	font-size: 1em !important;
+	line-height: 1em !important;
+	border: 2px solid $grey-light !important;
+	box-shadow: 0 0 15px rgba( black, .1 ) !important;
 	border-radius: 0 !important;
 	background: rgba( white, .75 ) !important;
+	height: auto;
 }
 
 input[type=text], input[type=search], select {
@@ -23,6 +25,10 @@ button, input[type=submit] {
 
 .gform_wrapper {
 	
+	.gform-field-label {
+		font-size: 1em !important;
+	}
+
 	// some global field styles for donate form only
 	.short-form {
 		.gfield {

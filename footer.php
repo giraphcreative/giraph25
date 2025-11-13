@@ -27,7 +27,7 @@ $admin_email = get_option( 'admin_email' );
 <?php wp_footer(); ?>
 <div class="lightbox-container">
 	<div class="lightbox">
-		<a class="lightbox-close">X</a>
+		<a class="lightbox-close" href="javascript:void(0);">X</a>
 		<div class="lightbox-inner">
 			<div class="column image">
 				<img src="<?php bloginfo( 'template_url' ); ?>/img/loading.gif" />
@@ -38,6 +38,9 @@ $admin_email = get_option( 'admin_email' );
 			</div>
 		</div>
 	</div>
+</div>
+<div class="hidden project-request-form">
+	<?php print do_shortcode( '[gravityform id="2" /]') ?>
 </div>
 </body>
 </html>

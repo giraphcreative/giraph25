@@ -14,6 +14,15 @@
         @include padding;
         text-align: center;
 
+        .stat-inner {
+            opacity: 0;
+            transition: 500ms opacity ease-in-out;
+
+            &.visible {
+                opacity: 1;
+            }
+        }
+
         &.red {
             background: $red;
         }

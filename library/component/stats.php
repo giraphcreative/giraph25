@@ -2,7 +2,7 @@
 
 if ( have_rows( 'stats' ) ) :
     ?>
-<div class="statistics">
+<div class="statistics" id="stats">
     <?php
     while ( have_rows( 'stats' ) ) : the_row();
         $number = get_sub_field( 'number' );
@@ -10,8 +10,10 @@ if ( have_rows( 'stats' ) ) :
         $color = get_sub_field( 'color' );
         ?>
     <div class="stat <?php print $color ?>">
-        <span><?php print $number ?></span>
-        <?php print $label ?>
+        <div class="stat-inner">
+            <span><?php print $number ?></span>
+            <?php print $label ?>
+        </div>
     </div>
         <?php
     endwhile;

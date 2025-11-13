@@ -15,6 +15,7 @@
         left: 0;
         background: $red url(../img/bg-giraffe.svg) center center no-repeat;
         background-size: cover;
+        background-attachment: fixed;
     }
 
     @include respond-to( $bp-s ) {
@@ -26,12 +27,24 @@
         .logo {
             flex: 1 1 30%;
             margin-right: 5%;
+            opacity: 0;
+            transition: all 1s ease-in-out;
+            
+            &.visible {
+                opacity: 1;
+            }
         }
 
         .content {
             flex: 1 1 65%;
             padding-left: 5%;
             border-left: 3px solid rgba( $grey, .2 );
+            opacity: 0;
+            transition: all 1s ease-in-out;
+            
+            &.visible {
+                opacity: 1;
+            }
         }
 
         &:after {

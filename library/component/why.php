@@ -5,7 +5,7 @@ $content_left = get_sub_field( 'content-left' );
 $content_right = get_sub_field( 'content-right' );
 
 ?>
-<div class="why">
+<div class="why" id="why">
     <h2><?php print $title; ?></h2>
     <div class="content">
         <div class="content-left">

@@ -4,17 +4,19 @@
     position: relative;
     overflow: hidden;
 
-    &:before {
-        position: absolute;
-        left: -25%;
-        top: 0;
-        bottom: 0;
-        width: 25%;
-        transition: left 10s ease-in-out;
-        content: '';
-        background: url(../img/giraph-walk.gif) center center no-repeat;
-        background-size: contain;
-        z-index: 2;
+    @include respond-to( $bp-m ) {
+        &:before {
+            position: absolute;
+            left: -25%;
+            top: 0;
+            bottom: 0;
+            width: 25%;
+            transition: left 7s ease-in-out;
+            content: '';
+            background: url(../img/giraph-walk.gif) center center no-repeat;
+            background-size: contain;
+            z-index: 2;
+        }
     }
 
     &.molecule:after {
@@ -50,11 +52,23 @@
         @include respond-to( $bp-xxl ) {
             padding: 8% 30%;
         }
+
+        h1, p {
+            opacity: 0;
+            transition: 2s opacity ease-in-out;
+
+            &.visible {
+                opacity: 1;
+            }
+        }
+
+
     }
 
     &.red.giraffe {
         background: $red url(../img/bg-giraffe.svg) center center no-repeat;
         background-size: cover;
+        background-attachment: fixed;
 
         * {
             color: white;

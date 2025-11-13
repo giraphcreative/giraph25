@@ -1,15 +1,28 @@
 
 
 .work-container {
-    background: url(../img/bg-chemistry-complex.svg) center center no-repeat;
+    background: white url(../img/bg-chemistry-complex.svg) center center no-repeat;
     background-size: cover;
     @include padding;
+    position: relative;
+    z-index: 2;
 
     .work-title {
         padding-bottom: 20px;
 
         @include respond-to( $bp-m ) {
             padding-bottom: 40px;
+        }
+    }
+
+    h2 {
+        @include respond-to( $bp-m ) {
+            opacity: 0;
+            transition: 500ms opacity ease-in-out;
+
+            &.visible {
+                opacity: 1;
+            }
         }
     }
 
@@ -31,6 +44,15 @@
             @include respond-to( $bp-s ) {
                 flex: 0 0 48%;
                 margin: 0 2% 2% 0;
+            }
+
+            @include respond-to( $bp-m ) {
+                opacity: 0;
+                transition: 500ms opacity ease-in-out;
+
+                &.visible {
+                    opacity: 1;
+                }
             }
 
             @include respond-to( $bp-l ) {

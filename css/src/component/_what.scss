@@ -1,23 +1,53 @@
 
 
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+   85% { transform: rotate(0deg); }
+   90% { transform: rotate(5deg); }
+   95% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
 .what {
     @include padding;
     text-align: center;
     background: url(../img/bg-chemistry-basic.svg) center center no-repeat;
     background-size: cover;
 
+    h2 {
+        opacity: 0;
+        transition: 500ms opacity ease-in-out;
+
+        &.visible {
+            opacity: 1;
+            transition: 500ms opacity ease-in-out;
+        }
+    }
+
     .intro {
         padding-bottom: 3%;
+        opacity: 0;
+
+        &.visible {
+            opacity: 1;
+            transition: 500ms opacity ease-in-out;
+        }
     }
 
     .icons {
+        .icon {
+        }
 
         @include respond-to( $bp-m ) {
             display: flex;
 
             .icon {
-                flex: 1;
+                flex: 0 0 33.3333%;
                 position: relative;
+                transition: 1s all ease-in-out;
+                margin-left: -30%;
+                opacity: 0;
 
                 &:before {
                     content: '';
@@ -28,10 +58,35 @@
                     background: url(../img/arrow-what.png) right center no-repeat;
                     background-size: cover;
                     top: 75px;
+                    opacity: 0;
+                    transition: 2000ms opacity ease-in-out;
                 }
 
                 &:first-child:before {
                     display: none;
+                }
+
+                .icon-image-inner img {
+                    display: none;
+                    animation: wiggle 2.5s infinite;
+                }
+
+                .icon-content {
+                    transition: 2s opacity ease-in-out;
+                    opacity: 0;
+                }
+                
+                &.visible {
+                    margin-left: 0;
+                    opacity: 1;
+
+                    .icon-content {
+                        opacity: 1;
+                    }
+
+                    &:before {
+                        opacity: 1;
+                    }
                 }
             }
         }

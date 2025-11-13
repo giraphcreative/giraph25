@@ -16,24 +16,28 @@
 <![endif]-->
 
 <?php wp_head(); ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=2" rel="stylesheet" type="text/css">
 
 </head>
 <body <?php body_class(); ?>>
 <div class="container">
-<div class="spacer giraffe red"></div>
+<div class="header-placeholder"></div>
 <header>
 	
-	<div class="logo">
-		<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-			<img src="<?php bloginfo( "template_url" ) ?>/img/logo.svg" alt="<?php bloginfo( 'name' ); ?>">
-		</a>
-	</div>
+	<div class="spacer giraffe red"></div>
+	<div class="header-inner">
+		<div class="logo">
+			<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+				<img src="<?php bloginfo( "template_url" ) ?>/img/logo.svg" alt="<?php bloginfo( 'name' ); ?>">
+			</a>
+		</div>
 
-	<nav>
-		<button class="menu-toggle">Show/hide Menu</button>
-		<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu' ) ); ?>
-	</nav>
+		<nav>
+			<button class="menu-toggle">Show/hide Menu</button>
+			<div class="request"><a href="#" class="btn red project-request">Project Request</a></div>
+			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu' ) ); ?>
+		</nav>
+	</div>
 	
 </header>
 

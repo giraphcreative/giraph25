@@ -5,7 +5,7 @@ $form = get_sub_field( 'form' );
 $content = get_sub_field( 'content' );
 
 ?>
-<div class="form-container">
+<div class="form-container" id="connect">
     <h2><?php print $title; ?></h2>
     <div class="form-inner">
         <div class="form">

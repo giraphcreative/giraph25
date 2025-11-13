@@ -3,7 +3,7 @@
 
 
 ?>
-<div class="who">
+<div class="who" id="who">
     <div class="title"><h2>Who we are</h2></div>
     <div class="who-people">
         <div class="primary">
@@ -18,7 +18,7 @@
                     <?php if ( have_rows( 'programs' ) ) : ?>
                         <div class="programs"><p><strong>Favorite Programs:</strong><br>
                         <?php while ( have_rows( 'programs' ) ) : the_row();
-                            print '<img src="' . get_sub_field( 'icon' ) . '" title="' . get_sub_field( 'name' ) . '" alt="' . get_sub_field( 'name' ) . '" />';
+                            print '<img src="' . get_sub_field( 'icon' ) . '" title="' . get_sub_field( 'name' ) . '" alt="' . get_sub_field( 'name' ) . '" class="no-lazyload" />';
                         endwhile; ?>
                         </p></div>
                     <?php endif; ?>
@@ -39,7 +39,7 @@
                     <?php if ( have_rows( 'programs' ) ) : ?>
                         <div class="programs"><p><strong>Favorite Programs:</strong><br>
                         <?php while ( have_rows( 'programs' ) ) : the_row();
-                            print '<img src="' . get_sub_field( 'icon' ) . '" title="' . get_sub_field( 'name' ) . '" alt="' . get_sub_field( 'name' ) . '" />';
+                            print '<img src="' . get_sub_field( 'icon' ) . '" title="' . get_sub_field( 'name' ) . '" alt="' . get_sub_field( 'name' ) . '" class="no-lazyload" />';
                         endwhile; ?>
                         </p></div>
                     <?php endif; ?>
@@ -60,7 +60,7 @@
                     <?php if ( have_rows( 'programs' ) ) : ?>
                         <div class="programs"><p><strong>Favorite Programs:</strong><br>
                         <?php while ( have_rows( 'programs' ) ) : the_row();
-                            print '<img src="' . get_sub_field( 'icon' ) . '" title="' . get_sub_field( 'name' ) . '" alt="' . get_sub_field( 'name' ) . '" />';
+                            print '<img src="' . get_sub_field( 'icon' ) . '" title="' . get_sub_field( 'name' ) . '" alt="' . get_sub_field( 'name' ) . '" class="no-lazyload" />';
                         endwhile; ?>
                         </p></div>
                     <?php endif; ?>

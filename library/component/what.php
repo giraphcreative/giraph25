@@ -4,7 +4,7 @@ $title = get_sub_field( 'title' );
 $intro = get_sub_field( 'intro' );
 
 ?>
-<div class="what">
+<div class="what" id="what">
 <?php
 
 if ( !empty( $title ) && !empty( $intro ) ) :

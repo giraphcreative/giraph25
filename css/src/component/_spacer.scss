@@ -6,6 +6,7 @@
     &.giraffe {
         background: url(../img/bg-giraffe.svg) center center no-repeat;
         background-size: cover;
+        background-attachment: fixed;
     }
 
     &.red {

@@ -17,7 +17,7 @@ $args = array(
 $work_query = new WP_Query( $args );
 if ( $work_query->have_posts() ) :
     ?>
-<div class="work-container">
+<div class="work-container" id="work">
     <div class="work-title"><h2><?php print $title; ?></h2></div>
     <div class="work">
     <?php
@@ -42,3 +42,4 @@ if ( $work_query->have_posts() ) :
 endif;
 
 wp_reset_postdata();
+
