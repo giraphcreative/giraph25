@@ -47,6 +47,8 @@
             }
 
             @include respond-to( $bp-m ) {
+                flex: 0 0 31.3333%;
+                margin: 0 2% 2% 0;
                 opacity: 0;
                 transition: 500ms opacity ease-in-out;
 
@@ -56,8 +58,7 @@
             }
 
             @include respond-to( $bp-l ) {
-                flex: 0 0 31.3333%;
-                margin: 0 2% 2% 0;
+                flex: 0 0 23%;
             }
 
             .item-description {

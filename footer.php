@@ -40,7 +40,7 @@ $admin_email = get_option( 'admin_email' );
 	</div>
 </div>
 <div class="hidden project-request-form">
-	<?php print do_shortcode( '[gravityform id="2" /]') ?>
+	<?php print do_shortcode( '[gravityform id="2" description="false" /]') ?>
 </div>
 </body>
 </html>

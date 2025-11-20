@@ -16,7 +16,7 @@
 <![endif]-->
 
 <?php wp_head(); ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=2" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=3" rel="stylesheet" type="text/css">
 
 </head>
 <body <?php body_class(); ?>>
@@ -35,7 +35,7 @@
 		<nav>
 			<button class="menu-toggle">Show/hide Menu</button>
 			<div class="request"><a href="#" class="btn red project-request">Project Request</a></div>
-			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu', 'container'=> false ) ); ?>
 		</nav>
 	</div>
 	
