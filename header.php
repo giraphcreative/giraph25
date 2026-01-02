@@ -34,7 +34,7 @@
 
 		<nav>
 			<button class="menu-toggle">Show/hide Menu</button>
-			<div class="request"><a href="#" class="btn red project-request">Project Request</a></div>
+			<div class="request"><a href="/project-request/" class="btn red project-request">Project Request</a></div>
 			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu', 'container'=> false ) ); ?>
 		</nav>
 	</div>
